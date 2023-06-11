@@ -11,12 +11,13 @@
             <img src="{{p.image}}" height="200" class="card-img-top" alt="...">
             <div class="card-body">
                 <h1>{{p.id}}</h1>
+                <h1>{{p.docId}}</h1>
               <h5 class="card-title">{{p.title}}</h5>
               <p class="card-text">{{p.desc}}</p>
-              <a class="btn btn-primary"  [routerLink]="['/single-product/', p['id']]" 
+              <a class="btn btn-primary"  [routerLink]="['/single-product/', p['docId']]" 
               routerLinkActive="router-link-active"  >show</a>
 
-              <a class="btn btn-primary"  [routerLink]="['/edti-productc/', p['id']]" 
+              <a class="btn btn-primary"  [routerLink]="['/edti-productc/', p['docId']]" 
               routerLinkActive="router-link-active"  >edit</a>
             </div>
           </div>

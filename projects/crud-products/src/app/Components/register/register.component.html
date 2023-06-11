@@ -27,6 +27,17 @@
                 <span *ngIf="password?.errors?.['maxLength']">name is 10 letters at most</span>
             </div>
         </div>
+        <div class="mb-3">
+            <label for="cpassword" class="form-label">Confirm password</label>
+            <input type="password" class="form-control cpassword" 
+            id="cpassword" formControlName="confirm"
+            [ngClass]="{'is-invalid': (confirm?.touched||confirm?.dirty) && confirm?.invalid }">
+            <div class="invalid-feedback ">
+                <!-- <span *ngIf="password?.errors?.['required']">name is required</span> -->
+                <!-- <span *ngIf="confirm?.errors?.['minLength']">name is 3 letters at least</span>
+                <span *ngIf="confirm?.errors?.['maxLength']">name is 10 letters at most</span> -->
+            </div>
+        </div>
 
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>

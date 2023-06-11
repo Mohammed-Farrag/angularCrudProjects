@@ -21,8 +21,8 @@ export class UserService {
       this.users = users;
     })
 
-    this.isAuthSubject = new BehaviorSubject<boolean>(true)
-    this.isLoggedinSubject = new BehaviorSubject<boolean>(true)
+    this.isAuthSubject = new BehaviorSubject<boolean>(false)
+    this.isLoggedinSubject = new BehaviorSubject<boolean>(false)
   }
 
   // isAuth: boolean = false;
@@ -57,7 +57,7 @@ export class UserService {
   
   }
 
-  async login(email: string, password: string){
+   login(email: string, password: string){
     
     
    return firebase.signInWithEmailAndPassword(this.auth, email, password)

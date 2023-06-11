@@ -20,11 +20,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
-import { Firestore } from 'firebase/firestore';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { ProductsModule } from './products.module';
-import { ApiProductsService } from './Services/api-products.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { MobileNumberPipe } from './Pipes/mobile-number.pipe';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +35,7 @@ import { ApiProductsService } from './Services/api-products.service';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
+    MobileNumberPipe,
     // ProductsModule,
   ],
   imports: [
@@ -53,6 +52,12 @@ import { ApiProductsService } from './Services/api-products.service';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
     
 
   ],

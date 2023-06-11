@@ -9,7 +9,10 @@
             <p>{{singlePro.desc}}</p>
             <h4>ID {{singlePro.id}}</h4>
             <p class="font-bold">in Stock: {{singlePro.inStock}}</p>
-            <a [routerLink]="['/edti-productc', singlePro.id]" class="btn btn-primary">Edit</a>
+           
+            <a [routerLink]="['/edti-productc', singlePro.docId]" class="btn btn-primary">Edit</a>
+            <button (click)="delete(singlePro.docId)" class="btn btn-danger">Delete</button>
+
         </div>
     </div>
 

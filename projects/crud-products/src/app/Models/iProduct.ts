@@ -1,6 +1,6 @@
 export interface IProduct{
     id: any
-    ids?:any
+    docId?:any
     title: string
     price: number
     inStock?: number

@@ -1,7 +1,7 @@
 import { user } from '@angular/fire/auth';
 import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { UserService } from '../../Services/user.service';
 import { Router } from '@angular/router';
 import { IUser } from '../../Models/iUser';
@@ -22,19 +22,31 @@ export class RegisterComponent  {
       private router: Router){
   }
 
+
+  passwordMatchingValidatior: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+    const password = control.get('password');
+    const confirmPassword = control.get('confirm');
   
+    return password?.value === confirmPassword?.value ? null : { notmatched: true };
+    }
+
   user: FormGroup = new FormGroup({
     name: new FormControl('',[Validators.required]),
     password: new FormControl('',
     [Validators.required,
     Validators.minLength(3),
     Validators.maxLength(10) ]),
+    confirm: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     role: new FormControl('')
-  }) 
-
+  }, {validators: this.passwordMatchingValidatior}) 
+;
   get name(){
     return this.user.get('name');
+  }
+;
+  get confirm(){
+    return this.user.get('confirm');
   }
   get password(){
     return this.user.get('password');

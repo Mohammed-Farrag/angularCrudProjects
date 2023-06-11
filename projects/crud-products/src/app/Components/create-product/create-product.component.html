@@ -3,29 +3,31 @@
         
         <div class="mb-3">
             <label for="title" class="form-label">title</label>
-            <input type="email" class="form-control title" id="title" formControlName="title">
+            <input type="email" 
+            class="form-control title" id="title" [(ngModel)]="editedP.title" formControlName="title">
         </div>
 
         <div class="mb-3">
             <label for="instock" class="form-label">inStock</label>
-            <input type="number" min="1" class="form-control instock" id="instock" formControlName="inStock">
+            <input type="number" min="1" class="form-control instock" id="instock"
+            [(ngModel)]="editedP.inStock" formControlName="inStock">
             
         </div>
 
-        <!-- {{editedP | json}} -->
+     
         <div class="mb-3">
             <label for="image" class="form-label">Image Path</label>
-            <input type="text"  class="form-control image" id="image" formControlName="image">
-            <!-- <input type="file"  class="form-control image" id="image" formControlName="image" #img > -->
-             <!-- {{file | json}} -->
-            <!-- <img ngSrc=""  alt=""> -->
+            <input type="text"  class="form-control image" id="image" 
+            formControlName="image" [(ngModel)]="editedP.image">
+            
         </div>
         
         <div class="mb-3">
             <label class="form-check-label" for="desc">Description</label>
-            <textarea type="checkbox desc" class="form-control desc" id="desc" [value]="editedP.desc" formControlName="desc"></textarea>
+            <textarea type="checkbox desc" class="form-control desc" id="desc"
+            [(ngModel)]="editedP.desc" formControlName="desc"></textarea>
         </div>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{(mode == 'create') ?'Submit' : 'Update'}}</button>
     </form>
 </div>

@@ -16,18 +16,17 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router, private firestore: Firestore){}
 
   user: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
+   
     password: new FormControl('',[Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email])
   })
 
-  get name(){
-    return this.user.get('name');
-  }
+ 
   newUser: IUser = { } as IUser
+
   login(){
     this.userService.login(this.user.value.email, this.user.value.password)
-    .then((userCredential) => {
+    .then((userCredential: any) => {
       if(userCredential.user){
         this.newUser = {
           name: this.user.value.name,
@@ -39,12 +38,13 @@ export class LoginComponent {
         this.userService.userSubject.next(this.newUser)
         this.userService.isAuthSubject.next(true)
         this.userService.isLoggedinSubject.next(true)
-        Swal.fire('login success', 'login operation success', 'success')
+        // Swal.fire('login success', 'login operation success', 'success')
         addDoc(collection(this.firestore, '/users'), this.newUser);
-        this.router.navigate(['/']);
+        console.log(userCredential.user)
+        this.router.navigate(['/products-list']);
     }
       console.log("memo", userCredential.user);
-      }).catch((err) => {this.handleErrCode(err.code)})
+      }).catch((err) => {console.log(err); this.handleErrCode(err.code)})
     
   }
   

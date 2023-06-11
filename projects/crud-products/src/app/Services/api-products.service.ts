@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnChanges, OnInit } from '@angular/core';
-import { collectionData, Firestore, collection,documentId, deleteDoc, getCountFromServer, doc, docData, DocumentData } from '@angular/fire/firestore';
+import { collectionData, Firestore, collection,documentId, deleteDoc, getCountFromServer, doc, docData, DocumentData, getDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { IProduct } from '../Models/iProduct';
 
@@ -26,13 +26,15 @@ export class ApiProductsService {
 
       this.products = data.sort((a,d) => d['id'] - a['id'] )
      
-      console.log(this.products)
+     
     })
 
     
     getCountFromServer(collection(this.firestore, 'products')).then(da => {
       this.projectCount = da.data().count
     })
+
+    // this.getProductByID('eaV8YyOZOUMdi12Gv5th')
 
   }
 
@@ -52,7 +54,12 @@ export class ApiProductsService {
   //   return p;
   // }
 
-  deleteProject(id:number){
-    deleteDoc(doc(this.firestore, '/products/')).then(d => console.log(d))
+  getProductByID(docId:string ){
+    return getDoc(doc(this.firestore, '/products/', docId))
+  }
+
+
+  deleteProject(docId:string){
+    return deleteDoc(doc(this.firestore, '/products/', docId)).then(d => console.log(d))
   }
 }
