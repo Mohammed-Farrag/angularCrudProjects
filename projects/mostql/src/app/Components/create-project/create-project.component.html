@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <form (ngSubmit)="addProject()" #p="ngForm" [formGroup]="project">
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="text" class="form-control title" id="title"  formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea  class="form-control desc" id="desc"  formControlName="desc"></textarea>
+
+        </div>
+        <div class="mb-3">
+            <label for="client" class="form-label">client</label>
+            <input type="text" class="form-control client" id="client"  formControlName="client">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

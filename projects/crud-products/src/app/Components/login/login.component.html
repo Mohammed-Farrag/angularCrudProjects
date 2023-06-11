@@ -1,0 +1,29 @@
+<div class="create-form">
+    <form (ngSubmit)="login()" #u="ngForm" [formGroup]="user" enctype="multipart/form-data">
+        
+        <!-- <div class="mb-3">
+            <label for="name" class="form-label">name</label>
+            <input type="text" class="form-control name" 
+            [ngClass]="{'is-invalid': (name?.touched||name?.dirty) && name?.invalid }" 
+            id="name" formControlName="name" name="name">
+            <div class="invalid-feedback">
+                <span *ngIf="name?.errors?.['required']">name is required</span>
+                <span *ngIf="!name?.errors?.['minLength']">name is 5 letters at least</span>
+            </div>
+        </div> -->
+
+        <div class="mb-3">
+            <label for="password" class="form-label">password</label>
+            <input type="password" class="form-control password" id="password" formControlName="password">
+          
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email"  class="form-control email" id="email" formControlName="email">
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

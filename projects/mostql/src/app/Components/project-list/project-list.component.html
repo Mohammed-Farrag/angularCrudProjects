@@ -1,0 +1,14 @@
+<div class="row mt-4">
+    <div class="col" *ngFor="let p of projects">
+        <div class="card">
+            <div class="card-header">
+              {{p.client}}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{p.title}}</h5>
+              <p class="card-text">{{p.desc}}</p>
+              <a href="#" class="btn btn-primary">Apply</a>
+            </div>
+          </div>
+    </div>
+</div>

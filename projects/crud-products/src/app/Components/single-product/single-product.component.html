@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src={{singlePro.image}} alt="">
+        </div>
+        <div class="col-md-6">
+            <div class="h2">{{singlePro.title}}</div>
+            <p>{{singlePro.desc}}</p>
+            <h4>ID {{singlePro.id}}</h4>
+            <p class="font-bold">in Stock: {{singlePro.inStock}}</p>
+            <a [routerLink]="['/edti-productc', singlePro.id]" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" routerLink="/">Back</button>
+</div>

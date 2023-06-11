@@ -1,0 +1,39 @@
+<div class="create-form">
+    <form (ngSubmit)="register()" #f="ngForm" [formGroup]="user" >
+        
+        <div class="mb-3">
+            <label for="name" class="form-label">name</label>
+            <input type="text" class="form-control name" 
+            [ngClass]="{'is-invalid': (name?.touched||name?.dirty) && name?.invalid }" 
+            id="name" formControlName="name" name="name">
+            
+        </div>
+
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <select class="form-control role" id="role" formControlName="role">
+                <option value="admin">admin</option>
+                <option value="user">user</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">password</label>
+            <input type="password" class="form-control password" 
+            id="password" formControlName="password"
+            [ngClass]="{'is-invalid': (password?.touched||password?.dirty) && password?.invalid }">
+            <div class="invalid-feedback ">
+                <!-- <span *ngIf="password?.errors?.['required']">name is required</span> -->
+                <span *ngIf="password?.errors?.['minLength']">name is 3 letters at least</span>
+                <span *ngIf="password?.errors?.['maxLength']">name is 10 letters at most</span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email"  class="form-control email" id="email" formControlName="email">
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+    </form>
+</div>

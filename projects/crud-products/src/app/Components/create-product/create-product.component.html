@@ -1,0 +1,31 @@
+<div class="create-form">
+    <form (ngSubmit)="addProduct()" #p="ngForm" [formGroup]="product" enctype="multipart/form-data">
+        
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="email" class="form-control title" id="title" formControlName="title">
+        </div>
+
+        <div class="mb-3">
+            <label for="instock" class="form-label">inStock</label>
+            <input type="number" min="1" class="form-control instock" id="instock" formControlName="inStock">
+            
+        </div>
+
+        <!-- {{editedP | json}} -->
+        <div class="mb-3">
+            <label for="image" class="form-label">Image Path</label>
+            <input type="text"  class="form-control image" id="image" formControlName="image">
+            <!-- <input type="file"  class="form-control image" id="image" formControlName="image" #img > -->
+             <!-- {{file | json}} -->
+            <!-- <img ngSrc=""  alt=""> -->
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-check-label" for="desc">Description</label>
+            <textarea type="checkbox desc" class="form-control desc" id="desc" [value]="editedP.desc" formControlName="desc"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
