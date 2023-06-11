@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Favicon-->
+  <link rel="icon" href="https://mostaql.hsoubcdn.com/public/assets/cards/favicon.png" sizes="16x16 32x32 48x48 64x64">
+  <title>Mostaqel Clone | Control Panel</title>
+
+  <!--Boostratap 5 Import-->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;800&family=Lato:wght@400;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Main Css Files-->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!--Control-Pannel CSS File-->
+  <link rel="stylesheet" href="/assets/css/controlPannel.css">
+</head>
+
+<body>
+  <!--Navigation Bar-->
+
+  <!--Navigation Draw Mobile-->
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-primary" id="offcanvasWithBothOptionsLabel">Mostaqel Clone</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="justify-content-end">
+        <ul class="navbar-nav text-center align-items-start">
+          <li class="nav-item w-100 px-1">
+            <a class="nav-link text-start py-2 px-3" aria-current="page" href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11 19v-6H5v-2h6V5h2v6h6v2h-6v6h-2Z" />
+              </svg>
+              Add Project
+            </a>
+          </li>
+          <li class="nav-item w-100 px-1">
+            <a class="nav-link text-start py-2 px-3" aria-current="page" href="projects.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 20 20">
+                <path fill="currentColor" d="M15.5 7a2.5 2.5 0 0 1 2.495 2.335l.006.164v6a2.5 2.5 0 0 1-2.336 2.495l-.164.005h-6a2.5 2.5 0 0 1-2.495-2.336l-.005-.164v-6a2.5 2.5 0 0 1 2.336-2.495L9.5 7h6Zm0 1H9.502a1.5 1.5 0 0 0-1.493 1.355l-.007.144v6a1.5 1.5 0 0 0 1.356 1.493l.144.007h6a1.5 1.5 0 0 0 1.493-1.356L17 15.5v-6a1.5 1.5 0 0 0-1.356-1.493L15.5 8Zm-2.999 1a.5.5 0 0 1 .492.41L13 9.5v2.498h2.501a.5.5 0 0 1 .09.992l-.09.008H13l.001 2.5a.5.5 0 0 1-.992.09l-.008-.09L12 13H9.501a.5.5 0 0 1-.09-.992l.09-.008H12l.001-2.5a.5.5 0 0 1 .5-.5Zm.162-5.306l.048.158l.575 2.147H12.25l-.505-1.889a1.5 1.5 0 0 0-1.696-1.091l-.141.03l-5.796 1.554a1.5 1.5 0 0 0-1.091 1.695l.03.142l1.554 5.795A1.5 1.5 0 0 0 6 13.346v1a2.502 2.502 0 0 1-2.31-1.682l-.052-.17l-1.553-5.795a2.5 2.5 0 0 1 1.61-3.015l.158-.047l5.795-1.553a2.5 2.5 0 0 1 2.957 1.458l.057.152Z" />
+              </svg>
+              Find Project
+            </a>
+          </li>
+          <li class="nav-item w-100 px-1">
+            <a class="nav-link text-start py-2 px-3" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9l-7 7.02z" />
+                <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+              </svg>
+              My Offers
+            </a>
+          </li>
+          <li class="nav-item w-100 px-1">
+            <a class="nav-link text-start py-2 px-3" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M6 22q-.825 0-1.413-.588T4 20V8q0-.825.588-1.413T6 6h2q0-1.65 1.175-2.825T12 2q1.65 0 2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.588 1.413T18 22H6Zm0-2h12V8h-2v2q0 .425-.288.713T15 11q-.425 0-.713-.288T14 10V8h-4v2q0 .425-.288.713T9 11q-.425 0-.713-.288T8 10V8H6v12Zm4-14h4q0-.825-.588-1.413T12 4q-.825 0-1.413.588T10 6ZM6 20V8v12Z" />
+              </svg>
+              Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item w-100 px-1">
+            <a class="nav-link text-start py-2 px-3" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M9.775 12q-.9 0-1.5-.675T7.8 9.75l.325-2.45q.2-1.425 1.3-2.363T12 4q1.475 0 2.575.938t1.3 2.362l.325 2.45q.125.9-.475 1.575t-1.5.675h-4.45Zm0-2h4.45L13.9 7.6q-.1-.7-.637-1.15T12 6q-.725 0-1.263.45T10.1 7.6L9.775 10ZM12 10ZM4 20v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Zm2-2h12v-.8q0-.275-.138-.5t-.362-.35q-1.35-.675-2.725-1.012T12 15q-1.4 0-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2v.8Zm6 0Z" />
+              </svg>
+              Profile
+            </a>
+          </li>
+          <li class="nav-item w-100 px-1">
+            <a class="nav-link text-start py-2 px-3" aria-current="page" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h7v2H5v14h7v2H5Zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5l-5 5Z" />
+              </svg>
+              Logout
+            </a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--END Navigation Draw Mobile-->
+  <nav class="navbar navbar-expand-lg bg-primary" id="nav">
+    <div class="container">
+      <a class="navbar-brand text-white" href="index.html">Mostaqel</a>
+
+      <!--Desktop Navigation-->
+      <div class="navigation d-flex align-items-center">
+        <div class="justify-content-end d-lg-flex w-100 d-none">
+          <ul class="navbar-nav text-end align-items-start">
+            <li class="nav-item px-1">
+              <a class="nav-link text-white py-2 px-3" aria-current="page" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11 19v-6H5v-2h6V5h2v6h6v2h-6v6h-2Z" />
+                </svg>
+                Add Project
+              </a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link text-white py-2 px-3" aria-current="page" href="projects.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 20 20">
+                  <path fill="currentColor" d="M15.5 7a2.5 2.5 0 0 1 2.495 2.335l.006.164v6a2.5 2.5 0 0 1-2.336 2.495l-.164.005h-6a2.5 2.5 0 0 1-2.495-2.336l-.005-.164v-6a2.5 2.5 0 0 1 2.336-2.495L9.5 7h6Zm0 1H9.502a1.5 1.5 0 0 0-1.493 1.355l-.007.144v6a1.5 1.5 0 0 0 1.356 1.493l.144.007h6a1.5 1.5 0 0 0 1.493-1.356L17 15.5v-6a1.5 1.5 0 0 0-1.356-1.493L15.5 8Zm-2.999 1a.5.5 0 0 1 .492.41L13 9.5v2.498h2.501a.5.5 0 0 1 .09.992l-.09.008H13l.001 2.5a.5.5 0 0 1-.992.09l-.008-.09L12 13H9.501a.5.5 0 0 1-.09-.992l.09-.008H12l.001-2.5a.5.5 0 0 1 .5-.5Zm.162-5.306l.048.158l.575 2.147H12.25l-.505-1.889a1.5 1.5 0 0 0-1.696-1.091l-.141.03l-5.796 1.554a1.5 1.5 0 0 0-1.091 1.695l.03.142l1.554 5.795A1.5 1.5 0 0 0 6 13.346v1a2.502 2.502 0 0 1-2.31-1.682l-.052-.17l-1.553-5.795a2.5 2.5 0 0 1 1.61-3.015l.158-.047l5.795-1.553a2.5 2.5 0 0 1 2.957 1.458l.057.152Z" />
+                </svg>
+                Find Project
+              </a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link text-white py-2 px-3" aria-current="page" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="m21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9l-7 7.02z" />
+                  <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+                </svg>
+                My Offers
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="notifay d-flex align-items-center mr-3">
+          <!--Drop Down Menu Notification Bell-->
+          <div class="dropdown mr-3 position-relative">
+            <!--Notify Alert-->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              9
+            </span>
+            <a class="nav-link text-white mr-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                <path fill="#fff" d="M4 19v-2h2v-7q0-2.075 1.25-3.688T10.5 4.2v-.7q0-.625.438-1.063T12 2q.625 0 1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h2v2H4Zm8-7.5ZM12 22q-.825 0-1.413-.588T10 20h4q0 .825-.588 1.413T12 22Zm-4-5h8v-7q0-1.65-1.175-2.825T12 6q-1.65 0-2.825 1.175T8 10v7Z" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu  notifay-list">
+              <li>
+                <a class="dropdown-item wrap text-wrap" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M9.775 12q-.9 0-1.5-.675T7.8 9.75l.325-2.45q.2-1.425 1.3-2.363T12 4q1.475 0 2.575.938t1.3 2.362l.325 2.45q.125.9-.475 1.575t-1.5.675h-4.45Zm0-2h4.45L13.9 7.6q-.1-.7-.637-1.15T12 6q-.725 0-1.263.45T10.1 7.6L9.775 10ZM12 10ZM4 20v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Zm2-2h12v-.8q0-.275-.138-.5t-.362-.35q-1.35-.675-2.725-1.012T12 15q-1.4 0-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2v.8Zm6 0Z" />
+                  </svg>
+                  <span class="text-primary">Khaled Ahmed Has Invited You</span>
+                  Looking For PHP Developer To Working with me in a big Project
+                  <div class="project-item mt-1">
+                    <div class="d-flex align-items-center">
+                      <span class="fs-p1 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                        </svg>
+                        2 Hours Ago
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item wrap text-wrap" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M9.775 12q-.9 0-1.5-.675T7.8 9.75l.325-2.45q.2-1.425 1.3-2.363T12 4q1.475 0 2.575.938t1.3 2.362l.325 2.45q.125.9-.475 1.575t-1.5.675h-4.45Zm0-2h4.45L13.9 7.6q-.1-.7-.637-1.15T12 6q-.725 0-1.263.45T10.1 7.6L9.775 10ZM12 10ZM4 20v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Zm2-2h12v-.8q0-.275-.138-.5t-.362-.35q-1.35-.675-2.725-1.012T12 15q-1.4 0-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2v.8Zm6 0Z" />
+                  </svg>
+                  <span class="text-primary">Abdallah Muhammed Has Invited You</span>
+                  Looking For Wordpress Developer
+                  <div class="project-item mt-1">
+                    <div class="d-flex align-items-center">
+                      <span class="fs-p1 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                        </svg>
+                        2 Hours Ago
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+            </ul>
+          </div>
+          <!--Drop Down Menu Notification Massage-->
+          <div class="dropdown mr-1  position-relative">
+            <!--Notify Alert-->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              3
+            </span>
+            <a class="nav-link text-white mr-1 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4ZM20 8l-7.475 4.675q-.125.075-.263.113t-.262.037q-.125 0-.263-.037t-.262-.113L4 8v10h16V8Zm-8 3l8-5H4l8 5ZM4 8v.25v-1.475v.025V6v.8v-.012V8.25V8v10V8Z" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu  notifay-list">
+              <li>
+                <a class="dropdown-item wrap text-wrap" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M9.775 12q-.9 0-1.5-.675T7.8 9.75l.325-2.45q.2-1.425 1.3-2.363T12 4q1.475 0 2.575.938t1.3 2.362l.325 2.45q.125.9-.475 1.575t-1.5.675h-4.45Zm0-2h4.45L13.9 7.6q-.1-.7-.637-1.15T12 6q-.725 0-1.263.45T10.1 7.6L9.775 10ZM12 10ZM4 20v-2.8q0-.85.438-1.563T5.6 14.55q1.55-.775 3.15-1.163T12 13q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20H4Zm2-2h12v-.8q0-.275-.138-.5t-.362-.35q-1.35-.675-2.725-1.012T12 15q-1.4 0-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2v.8Zm6 0Z" />
+                  </svg>
+                  <span class="text-primary">Khaled Ahmed Massaged You</span>
+                  About PHP Project
+                  <div class="project-item mt-1">
+                    <div class="d-flex align-items-center">
+                      <span class="fs-p1 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                        </svg>
+                        2 Hours Ago
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+            </ul>
+          </div>
+
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <img src="https://avatars.hsoubcdn.com/d1651fcfe3cfdfeed676eb5a5271b958?s=128" class="rounded-circle" width="36" height="36" alt="">
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </nav>
+  <!--End Navigation Bar-->
+  <!-- START Contol Pannel-->
+  <section id="control-pannel">
+    <div class="container">
+      <span class="text-p mb-2">Main</span>
+      <h3>Control Pannel</h3>
+      <!--Row 1 Pannel Information-->
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <!--Start Card Profile-->
+          <div class="card border-0 mt-3">
+            <div class="card-body">
+              <div class="image text-center">
+                <img src="https://avatars.hsoubcdn.com/d1651fcfe3cfdfeed676eb5a5271b958?s=128" class="rounded-circle mb-3" width="84" height="84" alt="Profile Pic">
+                <p><a href="#" class="text-dark">Abdallah Muhammed</a></p>
+                <hr>
+                <p><a href="#" class="text-dark">Edit Profile</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8">
+          <div class="card border-0 mt-3">
+            <div class="card-body  ">
+              <!--Start Card Money-->
+              <a href="#" class="text-center">
+                <div class="row justify-content-center">
+                  <div class="col-4">
+                    <p class="text-success fs-4"> All Payment <br><span class="fw-bold">$0.00</span>
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <p class="fs-4"> <span class="text-dark">Withdraw</span> <br><span class="fw-bold text-p">$0.00</span></p>
+                  </div>
+                </div>
+              </a>
+              <hr>
+              <a href="#" class="text-center">
+                <div class="row justify-content-center">
+                  <div class="col-4">
+                    <p class="text-p fw-bold"> Availble $0.00</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="text-p fw-bold"> Pending $0.00</p>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--Row 2 Pannel Information-->
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <!--Start Card Profile-->
+          <div class="card border-0 mt-3">
+            <div class="card-body">
+              <div class="image text-center mt-3">
+                <p><a href="#" class="text-dark fs-4">New Massages</a></p>
+                <hr>
+                <div class="d-flex justify-content-around align-items-center">
+                  <p><a href="#" class="text-dark fw-bold">Received <span>0</span></a></p>
+                  <p><a href="#" class="text-dark fw-bold">Delivered <span>0</span></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8">
+          <div class="card border-0 mt-3">
+            <div class="card-body">
+              <div class="row">
+                <!--Offers Intro-->
+                <div class="col-4">
+                  <a href="#" class="text-dark text-center">
+                    <p class="fs-4">My Offers <br><span>50</span></p>
+                  </a>
+                </div>
+                <!--Progress 1-->
+                <div class="col-4">
+                  <div class="progress__bars">
+                    <a href="#" class="progress__bar">
+                      <div class="bids-progress fs-p1">
+                        <div class="clearfix">
+                          <div class="pull-left">Waiting</div>
+                          <div class=" pull-right">3%</div>
+                        </div>
+                        <div class="progress progress--slim">
+                          <div class="progress-bar label-open" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 3%;">
+                            <span class="sr-only"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="progress__bar">
+                      <div class="bids-progress fs-p1">
+                        <div class="clearfix">
+                          <div class="pull-left">Done</div>
+                          <div class=" pull-right">3%</div>
+                        </div>
+                        <div class="progress progress--slim">
+                          <div class="progress-bar label-completed" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 3%;">
+                            <span class="sr-only"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+                <!--Progress 2-->
+                <div class="col-4">
+                  <div class="progress__bars">
+                    <a href="#" class="progress__bar">
+                      <div class="bids-progress fs-p1">
+                        <div class="clearfix">
+                          <div class="pull-left">in-progress</div>
+                          <div class=" pull-right">0%</div>
+                        </div>
+                        <div class="progress progress--slim">
+                          <div class="progress-bar label-in-progress" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="progress__bar">
+                      <div class="bids-progress fs-p1">
+                        <div class="clearfix">
+                          <div class="pull-left">Rejected</div>
+                          <div class=" pull-right">10%</div>
+                        </div>
+                        <div class="progress progress--slim">
+                          <div class="progress-bar label-rejected" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                            <span class="sr-only"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+                <!--BreakLine-->
+                <hr>
+                <div class="col-6">
+                  <a href="#">
+                    <p class="text-center text-dark">Avilable Offers : <span class="fw-bold text-p">15</span></p>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="#">
+                    <p class="text-center text-dark">Offers Left : <span class="fw-bold text-p">15</span></p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Row 3 My Works and Last Projects-->
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <!--Start Card Profile-->
+          <div class="card border-0 mt-3">
+            <div class="card-body">
+              <div class="image text-center mt-3">
+                <p><a href="#" class="text-dark fs-4">My Portfolio</a></p>
+                <p class="text-dark fs-4">3</p>
+                <hr>
+                <div class="d-flex justify-content-center align-items-center">
+                  <p>
+                    <a href="#" class="text-dark fw-bold">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8z" />
+                      </svg> <span>add Work</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8">
+          <div class="card border-0 mt-3">
+            <div class="card-body">
+              <h3 class="mt-3">Latest Projects</h3>
+              <hr>
+              <!--Project Items-->
+              <div class="project-item mb-3">
+                <h5>
+                  <a href="#">
+                    Programming For Website Using Next-JS
+                  </a>
+                </h5>
+                <div class="d-flex align-items-center">
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.39 14.56C16.71 13.7 14.53 13 12 13s-4.71.7-6.39 1.56A2.97 2.97 0 0 0 4 17.22V20h16v-2.78c0-1.12-.61-2.15-1.61-2.66zM18 18H6v-.78c0-.38.2-.72.52-.88C7.71 15.73 9.63 15 12 15c2.37 0 4.29.73 5.48 1.34c.32.16.52.5.52.88V18zm-8.22-6h4.44c1.21 0 2.14-1.06 1.98-2.26l-.32-2.45C15.57 5.39 13.92 4 12 4S8.43 5.39 8.12 7.29L7.8 9.74c-.16 1.2.77 2.26 1.98 2.26zm.32-4.41C10.26 6.67 11.06 6 12 6s1.74.67 1.9 1.59l.32 2.41H9.78l.32-2.41z" />
+                    </svg>
+                    Abdallahmmu
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                    </svg>
+                    2 Hours Ago
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9l-7 7.02z" />
+                      <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+                    </svg>
+                    10 Offers
+                  </span>
+                </div>
+              </div>
+              <hr>
+              <div class="project-item mb-3">
+                <h5>
+                  <a href="#">
+                    Looking for Programer Who Know Wordpress
+                  </a>
+                </h5>
+                <div class="d-flex align-items-center">
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.39 14.56C16.71 13.7 14.53 13 12 13s-4.71.7-6.39 1.56A2.97 2.97 0 0 0 4 17.22V20h16v-2.78c0-1.12-.61-2.15-1.61-2.66zM18 18H6v-.78c0-.38.2-.72.52-.88C7.71 15.73 9.63 15 12 15c2.37 0 4.29.73 5.48 1.34c.32.16.52.5.52.88V18zm-8.22-6h4.44c1.21 0 2.14-1.06 1.98-2.26l-.32-2.45C15.57 5.39 13.92 4 12 4S8.43 5.39 8.12 7.29L7.8 9.74c-.16 1.2.77 2.26 1.98 2.26zm.32-4.41C10.26 6.67 11.06 6 12 6s1.74.67 1.9 1.59l.32 2.41H9.78l.32-2.41z" />
+                    </svg>
+                    Abdallahmmu
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                    </svg>
+                    2 Hours Ago
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9l-7 7.02z" />
+                      <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+                    </svg>
+                    10 Offers
+                  </span>
+                </div>
+              </div>
+              <hr>
+              <div class="project-item mb-3">
+                <h5>
+                  <a href="#">
+                    PHP Developer Looking
+                  </a>
+                </h5>
+                <div class="d-flex align-items-center">
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.39 14.56C16.71 13.7 14.53 13 12 13s-4.71.7-6.39 1.56A2.97 2.97 0 0 0 4 17.22V20h16v-2.78c0-1.12-.61-2.15-1.61-2.66zM18 18H6v-.78c0-.38.2-.72.52-.88C7.71 15.73 9.63 15 12 15c2.37 0 4.29.73 5.48 1.34c.32.16.52.5.52.88V18zm-8.22-6h4.44c1.21 0 2.14-1.06 1.98-2.26l-.32-2.45C15.57 5.39 13.92 4 12 4S8.43 5.39 8.12 7.29L7.8 9.74c-.16 1.2.77 2.26 1.98 2.26zm.32-4.41C10.26 6.67 11.06 6 12 6s1.74.67 1.9 1.59l.32 2.41H9.78l.32-2.41z" />
+                    </svg>
+                    Abdallahmmu
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                    </svg>
+                    2 Hours Ago
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9l-7 7.02z" />
+                      <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+                    </svg>
+                    10 Offers
+                  </span>
+                </div>
+              </div>
+              <hr>
+              <div class="project-item mb-3">
+                <h5>
+                  <a href="#">
+                    Experiance Video Editor
+                  </a>
+                </h5>
+                <div class="d-flex align-items-center">
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.39 14.56C16.71 13.7 14.53 13 12 13s-4.71.7-6.39 1.56A2.97 2.97 0 0 0 4 17.22V20h16v-2.78c0-1.12-.61-2.15-1.61-2.66zM18 18H6v-.78c0-.38.2-.72.52-.88C7.71 15.73 9.63 15 12 15c2.37 0 4.29.73 5.48 1.34c.32.16.52.5.52.88V18zm-8.22-6h4.44c1.21 0 2.14-1.06 1.98-2.26l-.32-2.45C15.57 5.39 13.92 4 12 4S8.43 5.39 8.12 7.29L7.8 9.74c-.16 1.2.77 2.26 1.98 2.26zm.32-4.41C10.26 6.67 11.06 6 12 6s1.74.67 1.9 1.59l.32 2.41H9.78l.32-2.41z" />
+                    </svg>
+                    Abdallahmmu
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53l4.59-3.85zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7z" />
+                    </svg>
+                    2 Hours Ago
+                  </span>
+                  <span class="fs-p1 text-secondary mr-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM13 20.01L4 11V4h7v-.01l9 9l-7 7.02z" />
+                      <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+                    </svg>
+                    10 Offers
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--END CONTROL PANNEL-->
+  <!--START FOOTER-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="d-flex justify-content-between align-items-center">
+
+            <div class="social d-flex flex-column">
+              <a class="navbar-brand fw-bold mb-1 fs-5" href="#nav">Mostaqel Clone</a>
+              <p class="text-p ">All Right Reseved ITI.</p>
+
+            </div>
+
+            <div class="social-links ">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
+                  <path fill="#1877F2" d="M256 128C256 57.308 198.692 0 128 0C57.308 0 0 57.307 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.347-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.958 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445" />
+                  <path fill="#FFF" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A128.959 128.959 0 0 0 128 256a128.9 128.9 0 0 0 20-1.555V165h29.825" />
+                </svg>
+              </a>
+
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 209">
+                  <path fill="#55acee" d="M256 25.45a105.04 105.04 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52c0 4.117.465 8.125 1.36 11.97c-43.65-2.191-82.35-23.1-108.255-54.876c-4.52 7.757-7.11 16.78-7.11 26.404c0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 0 1-23.79-6.57c-.003.22-.003.44-.003.661c0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475c-17.975 14.086-40.622 22.483-65.228 22.483c-4.24 0-8.42-.249-12.529-.734c23.243 14.902 50.85 23.597 80.51 23.597c96.607 0 149.434-80.031 149.434-149.435c0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 0 0 256 25.45" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--END FOOTER-->
+  <!--Bootstrap 5 JS-->
+  <script src="./assets//js/bootstrap.min.js"></script>
+</body>
+
+</html>
